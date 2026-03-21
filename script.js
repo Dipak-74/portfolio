@@ -56,9 +56,10 @@ const progressObserver = new IntersectionObserver(
   { threshold: 0.2 }
 );
 
-document.querySelectorAll("#skills .skills-list").forEach((container) => {
-  progressObserver.observe(container);
-});
+const skillsWrap = document.querySelector("#skills .skills-wrap");
+if (skillsWrap) {
+  progressObserver.observe(skillsWrap);
+}
 
 const setActiveNav = () => {
   let currentSection = "";

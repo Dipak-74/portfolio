@@ -309,13 +309,14 @@ a {
   border-radius: 50%;
   padding: 10px;
   background: conic-gradient(from 0deg, var(--cyan), var(--blue), var(--purple), var(--cyan));
-  /* Static frame — no rotate/float so the image stays stable */
+  /* Static frame — no rotation or float so the image stays stable */
   box-shadow: 0 0 30px rgba(57, 243, 255, 0.3), 0 0 42px rgba(168, 85, 247, 0.25);
 }
 
 .profile-image {
   height: 100%;
   object-fit: cover;
+  object-position: center;
   border-radius: 50%;
   border: 6px solid #0d142d;
 }
@@ -368,18 +369,67 @@ a {
   box-shadow: 0 0 18px rgba(57, 243, 255, 0.3);
 }
 
-.skills-list {
-  max-width: 850px;
+.skills-wrap {
+  max-width: 1050px;
   margin: 0 auto;
   display: grid;
-  gap: 1rem;
+  gap: 2.25rem;
+}
+
+.skills-group {
+  background: rgba(255, 255, 255, 0.02);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 1.1rem;
+  padding: 1.5rem 1.6rem;
+  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.2);
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.skills-group:hover {
+  border-color: rgba(57, 243, 255, 0.25);
+  box-shadow: 0 0 20px rgba(57, 243, 255, 0.08);
+}
+
+.skills-group-title {
+  font-family: "Orbitron", sans-serif;
+  font-size: clamp(0.95rem, 1.35vw, 1.1rem);
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--cyan);
+  margin-bottom: 1.25rem;
+  display: flex;
+  align-items: center;
+  gap: 0.55rem;
+  text-shadow: 0 0 12px rgba(57, 243, 255, 0.35);
+}
+
+.skills-group-title i {
+  font-size: 1rem;
+  opacity: 0.95;
+}
+
+.skills-group-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1.2rem;
+}
+
+@media (max-width: 640px) {
+  .skills-group-grid {
+    grid-template-columns: 1fr;
+  }
 }
 
 .skill-item {
   background: var(--glass);
   border: 1px solid rgba(255, 255, 255, 0.1);
-  border-radius: 0.85rem;
-  padding: 1rem;
+  border-radius: 0.95rem;
+  padding: 1.25rem 1.35rem;
+  min-height: 5.25rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   transition: box-shadow 0.3s ease;
 }
 
@@ -390,12 +440,27 @@ a {
 .skill-title {
   display: flex;
   justify-content: space-between;
-  margin-bottom: 0.6rem;
+  align-items: baseline;
+  gap: 0.5rem;
+  margin-bottom: 0.75rem;
+  font-size: clamp(0.95rem, 1.1vw, 1.05rem);
+}
+
+.skill-title span:first-child {
+  font-weight: 600;
+  color: var(--text);
+}
+
+.skill-title span:last-child {
+  font-family: "Orbitron", sans-serif;
+  font-size: 0.88em;
+  color: var(--cyan);
+  flex-shrink: 0;
 }
 
 .progress {
   width: 100%;
-  height: 10px;
+  height: 13px;
   border-radius: 999px;
   background: rgba(255, 255, 255, 0.08);
   overflow: hidden;
@@ -415,44 +480,6 @@ a {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: 1rem;
-}
-
-.expertise-grid {
-  display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 1rem;
-}
-
-.expertise-card {
-  background: linear-gradient(145deg, rgba(255, 255, 255, 0.06), rgba(255, 255, 255, 0.02));
-  border: 1px solid rgba(57, 243, 255, 0.2);
-  border-radius: 1rem;
-  padding: 1.2rem;
-  box-shadow: var(--shadow);
-  transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
-}
-
-.expertise-card i {
-  color: var(--cyan);
-  font-size: 1.2rem;
-  margin-bottom: 0.65rem;
-  text-shadow: 0 0 12px rgba(57, 243, 255, 0.5);
-}
-
-.expertise-card h3 {
-  font-size: var(--fs-h3);
-  margin-bottom: 0.45rem;
-}
-
-.expertise-card p {
-  color: var(--muted);
-  font-size: var(--fs-small);
-}
-
-.expertise-card:hover {
-  transform: translateY(-6px);
-  border-color: rgba(168, 85, 247, 0.45);
-  box-shadow: 0 0 26px rgba(79, 124, 255, 0.3);
 }
 
 .project-card {
@@ -475,11 +502,7 @@ a {
 .project-image img {
   height: 220px;
   object-fit: cover;
-  transition: transform 0.4s ease;
-}
-
-.project-card:hover .project-image img {
-  transform: scale(1.08);
+  object-position: center;
 }
 
 .project-body {
@@ -650,8 +673,7 @@ a {
   }
 
   .about-points,
-  .project-grid,
-  .expertise-grid {
+  .project-grid {
     grid-template-columns: 1fr 1fr;
   }
 }
@@ -699,8 +721,7 @@ a {
   }
 
   .about-points,
-  .project-grid,
-  .expertise-grid {
+  .project-grid {
     grid-template-columns: 1fr;
   }
 }
