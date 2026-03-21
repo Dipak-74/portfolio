@@ -309,7 +309,7 @@ a {
   border-radius: 50%;
   padding: 10px;
   background: conic-gradient(from 0deg, var(--cyan), var(--blue), var(--purple), var(--cyan));
-  animation: rotateBorder 5s linear infinite, float 5s ease-in-out infinite;
+  /* Static frame — no rotate/float so the image stays stable */
   box-shadow: 0 0 30px rgba(57, 243, 255, 0.3), 0 0 42px rgba(168, 85, 247, 0.25);
 }
 
@@ -318,14 +318,6 @@ a {
   object-fit: cover;
   border-radius: 50%;
   border: 6px solid #0d142d;
-}
-
-@keyframes rotateBorder {
-  to { transform: rotate(360deg); }
-}
-
-@keyframes float {
-  50% { transform: translateY(-10px); }
 }
 
 .about-card {
