@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Dipak's personal portfolio website." />
+  <title>Dipak.dev | Portfolio</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700;800&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="loader" id="loader">
+    <div class="loader-ring"></div>
+    <p>Loading Portfolio...</p>
+  </div>
+
+  <div class="cursor-glow" id="cursorGlow"></div>
+
+  <header class="header">
+    <nav class="navbar container">
+      <a href="#home" class="logo">Dipak<span>.dev</span></a>
+
+      <button class="menu-toggle" id="menuToggle" aria-label="Toggle navigation">
+        <i class="fa-solid fa-bars"></i>
+      </button>
+
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#home" class="nav-link active">Home</a></li>
+        <li><a href="#about" class="nav-link">About</a></li>
+        <li><a href="#skills" class="nav-link">Skills</a></li>
+        <li><a href="#projects" class="nav-link">Projects</a></li>
+        <li><a href="#contact" class="nav-link">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section class="section home" id="home">
+      <div class="container home-grid">
+        <div class="home-content reveal">
+          <p class="intro">Hello, It's Me</p>
+          <h1 class="name-glow">Dipak Gaikwad</h1>
+          <h2>I'm a <span id="typedText"></span></h2>
+          <p class="tagline">
+            I craft modern digital experiences through clean code, creative design,
+            and data-driven thinking.
+          </p>
+
+          <div class="social-icons">
+            <a href="https://www.linkedin.com/in/dipakgaikwad74/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+            <a href="https://github.com/Dipak-74" target="_blank" rel="noopener noreferrer" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
+            <a href="https://www.instagram.com/?hl=en" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+          </div>
+
+          <div class="btn-group">
+            <a href="Dipak%20Res.pdf" class="btn btn-primary" download="Dipak-Resume.pdf">Download Resume</a>
+            <a href="#contact" class="btn btn-outline">Hire Me</a>
+          </div>
+        </div>
+
+        <div class="home-image-wrap reveal">
+          <div class="profile-ring">
+            <img src="img/image.png" alt="Dipak profile" class="profile-image" />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="about">
+      <div class="container">
+        <div class="section-head reveal">
+          <h2>About Me</h2>
+          <p>Passionate developer skilled in Web Development, App Development, and Data Analysis.</p>
+        </div>
+
+        <div class="about-card reveal">
+          <p>
+            I am a growth-focused developer who enjoys building products that are fast,
+            scalable, and visually impactful. I combine strong frontend engineering with
+            practical backend and analytical skills to deliver complete digital solutions.
+          </p>
+
+          <div class="about-points">
+            <article class="glass-card">
+              <i class="fa-solid fa-briefcase"></i>
+              <h3>Experience</h3>
+              <p>Hands-on project experience across web apps, UI clones, and dashboards.</p>
+            </article>
+            <article class="glass-card">
+              <i class="fa-solid fa-graduation-cap"></i>
+              <h3>Education</h3>
+              <p>Strong academic foundation in software and practical development workflows.</p>
+            </article>
+            <article class="glass-card">
+              <i class="fa-solid fa-bolt"></i>
+              <h3>Strengths</h3>
+              <p>Problem-solving, clean architecture, responsive UI, and teamwork.</p>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="skills">
+      <div class="container">
+        <div class="section-head reveal">
+          <h2>Skills</h2>
+          <p>Languages, cloud, backend, and data tools — organized for clarity.</p>
+        </div>
+
+        <div class="skills-wrap reveal">
+          <div class="skills-group">
+            <h3 class="skills-group-title"><i class="fa-solid fa-layer-group"></i> Languages &amp; UI</h3>
+            <div class="skills-group-grid">
+              <div class="skill-item">
+                <div class="skill-title"><span>HTML</span><span>90%</span></div>
+                <div class="progress"><span data-width="90%"></span></div>
+              </div>
+              <div class="skill-item">
+                <div class="skill-title"><span>CSS</span><span>85%</span></div>
+                <div class="progress"><span data-width="85%"></span></div>
+              </div>
+              <div class="skill-item">
+                <div class="skill-title"><span>JavaScript</span><span>80%</span></div>
+                <div class="progress"><span data-width="80%"></span></div>
+              </div>
+              <div class="skill-item">
+                <div class="skill-title"><span>Dart</span><span>78%</span></div>
+                <div class="progress"><span data-width="78%"></span></div>
+              </div>
+              <div class="skill-item">
+                <div class="skill-title"><span>Java</span><span>70%</span></div>
+                <div class="progress"><span data-width="70%"></span></div>
+              </div>
+              <div class="skill-item">
+                <div class="skill-title"><span>Flutter</span><span>75%</span></div>
+                <div class="progress"><span data-width="75%"></span></div>
+              </div>
+            </div>
+          </div>
+
+          <div class="skills-group">
+            <h3 class="skills-group-title"><i class="fa-solid fa-server"></i> Backend, Cloud &amp; Integration</h3>
+            <div class="skills-group-grid">
+              <div class="skill-item">
+                <div class="skill-title"><span>Backend Logic</span><span>82%</span></div>
+                <div class="progress"><span data-width="82%"></span></div>
+              </div>
+              <div class="skill-item">
+                <div class="skill-title"><span>MySQL</span><span>76%</span></div>
+                <div class="progress"><span data-width="76%"></span></div>
+              </div>
+              <div class="skill-item">
+                <div class="skill-title"><span>AWS</span><span>68%</span></div>
+                <div class="progress"><span data-width="68%"></span></div>
+              </div>
+              <div class="skill-item">
+                <div class="skill-title"><span>Firebase Integration</span><span>74%</span></div>
+                <div class="progress"><span data-width="74%"></span></div>
+              </div>
+            </div>
+          </div>
+
+          <div class="skills-group">
+            <h3 class="skills-group-title"><i class="fa-solid fa-chart-line"></i> Data &amp; Productivity</h3>
+            <div class="skills-group-grid">
+              <div class="skill-item">
+                <div class="skill-title"><span>Data Analysis</span><span>72%</span></div>
+                <div class="progress"><span data-width="72%"></span></div>
+              </div>
+              <div class="skill-item">
+                <div class="skill-title"><span>Excel</span><span>80%</span></div>
+                <div class="progress"><span data-width="80%"></span></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="projects">
+      <div class="container">
+        <div class="section-head reveal">
+          <h2>MY PROJECTS</h2>
+          <p>Explore my work across different domains</p>
+        </div>
+
+        <div class="project-categories" role="tablist" aria-label="Project categories">
+          <button class="category-card active" type="button" role="tab" aria-selected="true" data-category="websites">
+            <i class="fa-solid fa-globe" aria-hidden="true"></i>
+            <span class="category-name">Websites</span>
+            <span class="category-count">3 Projects</span>
+          </button>
+          <button class="category-card" type="button" role="tab" aria-selected="false" data-category="apps">
+            <i class="fa-solid fa-mobile-screen-button" aria-hidden="true"></i>
+            <span class="category-name">Apps</span>
+            <span class="category-count">3 Projects</span>
+          </button>
+          <button class="category-card" type="button" role="tab" aria-selected="false" data-category="games">
+            <i class="fa-solid fa-gamepad" aria-hidden="true"></i>
+            <span class="category-name">Games</span>
+            <span class="category-count">1 Project</span>
+          </button>
+          <button class="category-card" type="button" role="tab" aria-selected="false" data-category="dataAnalytics">
+            <i class="fa-solid fa-chart-line" aria-hidden="true"></i>
+            <span class="category-name">Data Analytics</span>
+            <span class="category-count">1 Project</span>
+          </button>
+          <button class="category-card" type="button" role="tab" aria-selected="false" data-category="agenticAI">
+            <i class="fa-solid fa-robot" aria-hidden="true"></i>
+            <span class="category-name">Agentic AI</span>
+            <span class="category-count">1 Project</span>
+          </button>
+        </div>
+
+        <div class="projects-toolbar">
+          <h3 id="projectsHeading"><i class="fa-solid fa-globe"></i> Web Development Projects</h3>
+          <p><strong id="projectCount">3</strong> Projects Found</p>
+        </div>
+
+        <div class="project-grid" id="projectGrid" aria-live="polite"></div>
+
+        <div class="project-modal" id="projectModal" role="dialog" aria-modal="true" aria-labelledby="modalTitle" aria-hidden="true">
+          <div class="modal-backdrop" data-modal-close></div>
+          <div class="modal-content">
+            <button class="modal-close" type="button" aria-label="Close project details" data-modal-close><i class="fa-solid fa-xmark"></i></button>
+            <img id="modalImage" src="" alt="" />
+            <div class="modal-body">
+              <p class="modal-kicker">Project details</p>
+              <h2 id="modalTitle"></h2>
+              <p id="modalDescription"></p>
+              <div class="tags" id="modalTags"></div>
+              <ul class="modal-features" id="modalFeatures"></ul>
+              <div class="modal-actions" id="modalActions"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="contact">
+      <div class="container contact-grid">
+        <div class="contact-info reveal">
+          <div class="section-head">
+            <h2>Contact Me</h2>
+            <p>Let's connect and build something impactful together.</p>
+          </div>
+          <p><i class="fa-solid fa-location-dot"></i> India</p>
+          <p><i class="fa-solid fa-envelope"></i> dipak.dev@email.com</p>
+          <div class="social-icons">
+            <a href="https://www.linkedin.com/in/dipakgaikwad74/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+            <a href="https://github.com/Dipak-74" target="_blank" rel="noopener noreferrer" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
+            <a href="https://www.instagram.com/?hl=en" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+          </div>
+        </div>
+
+        <form class="contact-form reveal" id="contact-form">
+  
+            <input type="text" name="user_name" placeholder="Your Name" required />
+          
+            <input type="email" name="user_email" placeholder="Your Email" required />
+          
+            <input type="text" name="title" placeholder="Subject" required />
+          
+            <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
+          
+            <button type="submit" class="btn btn-primary">Send Message</button>
+          
+          </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <p>© 2026 Dipak | All Rights Reserved</p>
+    <div class="social-icons">
+      <a href="https://www.linkedin.com/in/dipakgaikwad74/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+      <a href="https://github.com/Dipak-74" target="_blank" rel="noopener noreferrer" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
+      <a href="https://www.instagram.com/?hl=en" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+    </div>
+  </footer>
+
+  <button class="back-to-top" id="backToTop" aria-label="Back to top">
+    <i class="fa-solid fa-arrow-up"></i>
+  </button>
+
+  <script src="https://unpkg.com/typed.js@2.0.15/dist/typed.umd.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
