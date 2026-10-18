@@ -256,8 +256,8 @@ function initProjectGallery() {
 
   if (!projectGrid) return;
 
-  // Default to Full Stack or All
-  let activeCategory = "all";
+  // Default to Full Stack
+  let activeCategory = "fullstack";
 
   function renderProjects(category) {
     const items = projects[category];
