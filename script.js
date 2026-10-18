@@ -488,10 +488,9 @@ function initTypedText() {
   if (typeof Typed !== "undefined") {
     new Typed("#typedText", {
       strings: [
-        "Software Developer",
-        "Java Full-Stack Developer",
+        "Java Full Stack Developer",
         "Flutter App Developer",
-        "Agentic AI Enthusiast"
+        "Data Analyst"
       ],
       typeSpeed: 60,
       backSpeed: 35,
@@ -501,7 +500,7 @@ function initTypedText() {
       cursorChar: "|"
     });
   } else {
-    typedTarget.textContent = "Software Developer";
+    typedTarget.textContent = "Java Full Stack Developer";
   }
 }
 
